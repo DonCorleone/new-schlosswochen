@@ -1,0 +1,4 @@
+markdown > p {
+  display: flex;
+  flex-direction: column;
+}

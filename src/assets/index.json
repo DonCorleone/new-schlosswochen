@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "sortorder": 100,
+        "active": true,
+        "title": "Anmelden",
+        "text": ""
+    },
+    {
+        "id": 2,
+        "sortorder": 200,
+        "active": true,
+        "title": "Schlosswochen",
+        "text": ""
+    },
+    {
+        "id": 3,
+        "sortorder": 300,
+        "active": true,
+        "title": "Alter",
+        "text": ""
+     },
+    {
+        "id": 4,
+        "sortorder": 400,
+        "active": true,
+        "title": "Zeit",
+        "text": ""
+    },
+    {
+        "id": 5,
+        "sortorder": 500,
+        "active": true,
+        "title": "Kosten",
+        "text": ""
+    },
+    {
+        "id": 6,
+        "sortorder": 600,
+        "active": true,
+        "title": "AGB",
+        "text": ""
+    },
+    {
+        "id": 7,
+        "sortorder": 700,
+        "active": true,
+        "title": "Ort",
+        "text": ""
+       },
+    {
+        "id": 8,
+        "sortorder": 800,
+        "active": true,
+        "title": "Details",
+        "text": ""
+    },
+    {
+        "id": 9,
+        "sortorder": 900,
+        "active": true,
+        "title": "Verpflegung",
+        "text": ""
+    },
+    {
+        "id": 10,
+        "sortorder": 1000,
+        "active": true,
+        "title": "Newsletter",
+        "text": ""
+    },
+    {
+        "id": 11,
+        "sortorder": 1100,
+        "active": true,
+        "title": "Tagesplan",
+        "text": ""
+    },
+    {
+        "id": 12,
+        "sortorder": 1200,
+        "active": true,
+        "title": "Covid-19",
+        "text": ""
+    }
+]
