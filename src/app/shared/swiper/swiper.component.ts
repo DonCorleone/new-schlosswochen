@@ -2,10 +2,10 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { EMPTY, map, Observable, Subject, takeUntil } from 'rxjs';
 import { SwiperOptions } from 'swiper';
 import {
-  Image as image4File,
-  ImagesService,
+  ImagesService, Netlifile,
 } from '../../services/images.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-swiper',
@@ -29,15 +29,15 @@ export class SwiperComponent implements OnInit, OnDestroy {
   @Input() week: number = -1;
   @Input() year: number = -1;
 
-  files$: Observable<image4File[]> = EMPTY;
+  files$: Observable<Netlifile[]> = EMPTY;
 
   private _ngDestroy$ = new Subject<void>();
-  private query: string = '';
 
   constructor(
     private imageService: ImagesService,
     private breakpointObserver: BreakpointObserver
   ) {}
+
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -52,22 +52,26 @@ export class SwiperComponent implements OnInit, OnDestroy {
       .subscribe((result) => {
         for (const query of Object.keys(result.breakpoints)) {
           if (result.breakpoints[query]) {
-            var match = query.match('\\(max-width:\\s(\\d+)\\.98px\\)');
+            const match = query.match('\\(max-width:\\s(\\d+)\\.98px\\)');
+            const width = match?.length ? match[1] : '2048';
 
-            var width = match?.length ? match[1] : '2048';
-            if (this.year && this.week) {
-              this.files$ = this.imageService
-                .getAlbum(`schlosswochen/sw-${this.year}-${this.week}`)
-                ?.pipe(map((p) => {
-                  p.images?.forEach( image => image.url = `https://images.weserv.nl/?url=${image.url}&w=${width}&fit=contain&cbg=black`);
-                  return p.images;
-                }));
-            }
+            this.files$ = this.imageService.listAssets(`/assets/images/${this.year}-${this.week}`).pipe(
+              map((p) => {
+                p.forEach(
+                  (image) =>
+                    (image.path = `${environment.URL}${image.path}?nf_resize=fit&w=${width}`)
+                );
+                return p;
+              })
+            );
+            break;
           }
         }
       });
-    //  this.imageService.downloadAll();
   }
+
+  //        .getAlbum(`schlosswochen/sw-${this.year}-${this.week}`)
+
   ngOnDestroy() {
     this._ngDestroy$.next();
     this._ngDestroy$.complete();

@@ -2,7 +2,7 @@
   <div class="swiper-wrapper">
     <ng-container *ngFor="let file of files">
       <div class="swiper-slide ">
-        <img [src]="file.url" width="100%" [alt]="file.name" class="swiper-lazy">
+        <img [src]="file.path" width="100%" [alt]="file.id" class="swiper-lazy">
       </div>
     </ng-container>
   </div>

@@ -1,3 +1,6 @@
 node_modules
 # Local Netlify folder
 .netlify
+/.idea/.idea.schlosswochen-ch.dir/.idea/.gitignore
+/.angular/
+/.idea/

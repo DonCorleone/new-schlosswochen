@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  API_KEY_IMAGE4IO: '',
-  API_SECRET_IMAGE4IO: '',
-  API_URL_IMAGE4IO: '',
   NODE_VERSION: '16',
+  URL: 'undefined',
+  SITE_ID: 'undefined',
+  API_KEY_NETLIFY: 'undefined',
 };
 
 /*
