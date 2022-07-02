@@ -1,0 +1,17 @@
+<mat-card *ngIf="card" class="mt-2 h-full">
+  <mat-card-header *ngIf="card.title">
+    <mat-card-title class="text-4xl">{{ card.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="card.markdown; else fallback">
+    <p>
+      <markdown
+        class="prose dark:prose-invert"
+        [src]="'/assets/markdown/' + card.markdown + '.md'"
+      ></markdown>
+    </p>
+  </mat-card-content>
+  <mat-card-content>
+    <ng-template #fallback>
+    </ng-template>
+  </mat-card-content>
+</mat-card>

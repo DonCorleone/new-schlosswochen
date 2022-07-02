@@ -7,6 +7,11 @@ export class Content {
   markdown: string = "";
   gallery: string = "";
   impressions: Impression[] | undefined;
+  cards: Card[] | undefined;
+}
+export interface Card {
+  title: string;
+  markdown: string;
 }
 export interface Week {
   number: number;

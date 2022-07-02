@@ -1,23 +1,17 @@
 <div *ngIf="!content">
   <mat-spinner></mat-spinner>
 </div>
-<div *ngIf="content">
-  <mat-card>
-    <mat-card-header *ngIf="content.title">
-      <mat-card-title class="text-4xl">{{ content?.title }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content *ngIf="content.markdown; else fallback">
-      <p>
-        <markdown
-          class="prose dark:prose-invert"
-          [src]="'/assets/markdown/' + content.markdown + '.md'"
-        ></markdown>
-      </p>
-    </mat-card-content>
-    <mat-card-content>
-      <ng-template #fallback>
-      </ng-template>
-    </mat-card-content>
-  </mat-card>
-  <app-impressions *ngIf="content.impressions" [impressions]="content.impressions"></app-impressions>
+<div
+  *ngIf="content && content.cards"
+  class="grid justify-content-stretch grid-cols-1"
+  [ngClass]="{
+    'md:grid-cols-2 gap-3': content.cards.length > 1,
+    'lg:grid-cols-3 gap-4': content.cards.length > 2
+  }"
+>
+  <app-card *ngFor="let card of content.cards" [card]="card"></app-card>
 </div>
+<app-impressions
+  *ngIf="content && content.impressions"
+  [impressions]="content.impressions"
+></app-impressions>

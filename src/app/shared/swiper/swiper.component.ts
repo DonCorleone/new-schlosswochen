@@ -70,8 +70,6 @@ export class SwiperComponent implements OnInit, OnDestroy {
       });
   }
 
-  //        .getAlbum(`schlosswochen/sw-${this.year}-${this.week}`)
-
   ngOnDestroy() {
     this._ngDestroy$.next();
     this._ngDestroy$.complete();
