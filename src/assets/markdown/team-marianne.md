@@ -1,3 +1,5 @@
+![Marianne Hofer](https://new.schlosswochen.ch/assets/images/team-marianne.jpg "Marianne Hofer")
+
 Dozentin für Didaktik, Schultheater und Figurentheater am Kantonalen Kindergartenseminar Luzern
 
 2003 Gründung des Figurentheaters PETRUSCHKA.

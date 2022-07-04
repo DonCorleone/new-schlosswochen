@@ -1,5 +1,7 @@
 ## Robert Hofer, Sekundarlehrer
-7Sterne-Schlosswochenkoch
+![Robert Hofer](https://new.schlosswochen.ch/assets/images/team-robert.jpg "Robert Hofer")
+
+7-Sterne - Schlosswochenkoch
 
 ## Andreas Gilomen
 Begleitung der Lieder für die Figurentheater, Schlosswochenlieder und Soundtrack der Winterfigurentheater.
