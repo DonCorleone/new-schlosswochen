@@ -1,7 +1,9 @@
 <mat-card *ngIf="card" class="mt-2 h-full">
   <mat-card-header *ngIf="card.title">
-    <mat-card-title class="text-3xl">{{ card.title }}</mat-card-title>
+    <mat-card-title class="text-2xl">{{ card.title }}</mat-card-title>
   </mat-card-header>
+  <img *ngIf="card.imageUrl" mat-card-image [src]="card.imageUrl" alt="Photo of a Shiba Inu">
+  <!--img src="../../../../../assets/svg/logo.svg"-->
   <mat-card-content *ngIf="card.markdown; else fallback">
     <p>
       <markdown
