@@ -14,8 +14,10 @@ import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import { SharedModule } from '../shared/shared.module';
 import { ReadonlyDatepickerComponent } from './components/main-content/readonly-datepicker/readonly-datepicker.component';
 import { CustomDateAdapter } from './components/main-content/readonly-datepicker/custom-date-adapter';
-import {SwiperModule} from "../shared/swiper/swiper.module";
+import { SwiperModule } from '../shared/swiper/swiper.module';
 import { CardComponent } from './components/main-content/card/card.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MapsComponent } from './components/main-content/maps/maps.component';
 
 const routes: Routes = [
   {
@@ -44,13 +46,15 @@ const routes: Routes = [
     ImpressionsComponent,
     ReadonlyDatepickerComponent,
     CardComponent,
+    MapsComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
     MarkdownModule.forChild(),
-    SwiperModule
+    SwiperModule,
+    GoogleMapsModule,
   ],
   providers: [
     ContentService,
