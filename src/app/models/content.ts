@@ -10,6 +10,7 @@ export class Content {
   cards: Card[] | undefined;
 }
 export interface Card {
+  map: boolean;
   imageUrl: string;
   title: string;
   markdown: string;

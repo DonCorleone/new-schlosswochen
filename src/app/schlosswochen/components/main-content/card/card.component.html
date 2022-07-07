@@ -11,7 +11,7 @@
         [src]="'/assets/markdown/' + card.markdown + '.md'"
       ></markdown>
     </p>
-    <app-maps></app-maps>
+    <app-maps *ngIf="card.map"></app-maps>
   </mat-card-content>
   <mat-card-content>
     <ng-template #fallback>
