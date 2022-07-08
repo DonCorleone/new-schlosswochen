@@ -27,26 +27,26 @@ export class MapsComponent implements OnInit {
   markers: any[] = [];
 
   ngOnInit(): void {
-/*    this.markers.push({
+    this.markers.push({
       position: {
         lat: 47.0417285,
         lng: 8.3260751,
       },
       title: 'Marker title ' + (this.markers.length + 1),
       options: { animation: google.maps.Animation.DROP },
-    });*/
+    });
   }
   zoomIn() {
-    if (!this.options || !this.options.maxZoom) {
+    /*    if (!this.options || !this.options.maxZoom) {
       return;
     }
-    if (this.zoom < this.options.maxZoom) this.zoom++;
+    if (this.zoom < this.options.maxZoom) this.zoom++;*/
   }
 
   zoomOut() {
-    if (!this.options || !this.options.minZoom) {
+    /*    if (!this.options || !this.options.minZoom) {
       return;
     }
-    if (this.zoom > this.options.minZoom) this.zoom--;
+    if (this.zoom > this.options.minZoom) this.zoom--;*/
   }
 }
