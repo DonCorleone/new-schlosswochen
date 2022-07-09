@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import { Content } from '../../../../models/content';
 import { Observable } from 'rxjs';
 import { ContentService } from '../../../../services/content.service';
@@ -7,13 +7,8 @@ import { ContentService } from '../../../../services/content.service';
   selector: 'app-index',
   templateUrl: './index.component.html',
 })
-export class IndexComponent implements OnInit{
+export class IndexComponent {
   content$: Observable<Content[]> = this.contentService.content;
 
-  constructor(private contentService: ContentService) {
-  }
-
-  ngOnInit(): void {
-    this.contentService.loadAll();
-  }
+  constructor(private contentService: ContentService) {}
 }
