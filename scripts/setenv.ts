@@ -12,6 +12,7 @@ const environmentFileContent = isProduction
    NODE_VERSION: "${process.env?.['NODE_VERSION']}",
    SITE_ID: "${process.env?.['SITE_ID']}",
    API_KEY_NETLIFY: "${process.env?.['API_KEY_NETLIFY']}",
+   API_KEY_GMAPS: "${process.env?.['API_KEY_GMAPS']}",
    URL: "${process.env?.['URL']}",
 };`
   : `export const environment = {
@@ -19,6 +20,7 @@ const environmentFileContent = isProduction
   NODE_VERSION: "${process.env?.['NODE_VERSION']}",
    SITE_ID: "${process.env?.['SITE_ID']}",
    API_KEY_NETLIFY: "${process.env?.['API_KEY_NETLIFY']}",
+   API_KEY_GMAPS: "${process.env?.['API_KEY_GMAPS']}",
    URL: "${process.env?.['URL']}",
 };`; // write the content to the respective file
 writeFile(targetPath, environmentFileContent, function (err: any) {

@@ -12,4 +12,3 @@ __Individueller Verkehr:__ 6 Min. Parkplätze stehen beim Strandbad Tribschen zu
 _Wenn dort parkiert wird, führt ein direkter Weg durch das Schulhausgelände zum Pavillon Tribschenhorn. (Beim Pavillon Tribschenhorn darf nicht parkiert werden)._
 
 ### Karte
-Google Maps [maps.google.com](https://www.google.ch/maps/place/Richard-Wagner-Weg+17,+6005+Luzern)
