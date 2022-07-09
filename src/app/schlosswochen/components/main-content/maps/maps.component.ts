@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Card } from '../../../../models/content';
+import { catchError, map, Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-maps',
@@ -7,7 +9,6 @@ import { Card } from '../../../../models/content';
   styleUrls: ['./maps.component.css'],
 })
 export class MapsComponent implements OnInit {
-  @Input() card: Card | undefined;
   zoom = 15;
   center: google.maps.LatLngLiteral = new (class
     implements google.maps.LatLngLiteral
@@ -25,28 +26,41 @@ export class MapsComponent implements OnInit {
   };
 
   markers: any[] = [];
+  apiLoaded: Observable<boolean>;
 
-  ngOnInit(): void {
-    this.markers.push({
-      position: {
-        lat: 47.0417285,
-        lng: 8.3260751,
-      },
-      title: 'Marker title ' + (this.markers.length + 1),
-      options: { animation: google.maps.Animation.DROP },
-    });
+  constructor(httpClient: HttpClient) {
+    this.apiLoaded = httpClient
+      .jsonp(
+        'https://maps.googleapis.com/maps/api/js?key=AIzaSyA0wXnjzja4dmNBN7mwwsZm0KTaeuRtPXE',
+        'callback'
+      )
+      .pipe(
+        map(() => {
+          this.markers.push({
+            position: {
+              lat: 47.0417285,
+              lng: 8.3260751,
+            },
+            title: 'Marker title ' + (this.markers.length + 1),
+            options: { animation: google.maps.Animation.DROP },
+          });
+          return true;
+        }),
+        catchError(() => of(false))
+      );
   }
+  ngOnInit(): void {}
   zoomIn() {
-    /*    if (!this.options || !this.options.maxZoom) {
+    if (!this.options || !this.options.maxZoom) {
       return;
     }
-    if (this.zoom < this.options.maxZoom) this.zoom++;*/
+    if (this.zoom < this.options.maxZoom) this.zoom++;
   }
 
   zoomOut() {
-    /*    if (!this.options || !this.options.minZoom) {
+    if (!this.options || !this.options.minZoom) {
       return;
     }
-    if (this.zoom > this.options.minZoom) this.zoom--;*/
+    if (this.zoom > this.options.minZoom) this.zoom--;
   }
 }
