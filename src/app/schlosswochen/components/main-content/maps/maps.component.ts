@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../../../../models/content';
 import { catchError, map, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-maps',
@@ -31,7 +31,7 @@ export class MapsComponent implements OnInit {
   constructor(httpClient: HttpClient) {
     this.apiLoaded = httpClient
       .jsonp(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyA0wXnjzja4dmNBN7mwwsZm0KTaeuRtPXE',
+        `https://maps.googleapis.com/maps/api/js?key=${environment.API_KEY_GMAPS}`,
         'callback'
       )
       .pipe(
