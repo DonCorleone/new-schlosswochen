@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
-  map,
+  EMPTY,
+  map, Observable,
   Subject,
   takeUntil,
 } from 'rxjs';
@@ -48,7 +49,6 @@ export class MainContentComponent implements OnInit, OnDestroy {
         setTimeout(() => {
           this.contentService.content.subscribe((content) => {
             if (content.length == 0) return;
-
             setTimeout(() => {
               this.content = this.contentService.contentById(s);
               if (this.content?.impressions){

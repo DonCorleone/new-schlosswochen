@@ -1,0 +1,6 @@
+<div *ngIf="content$ | async as content">
+  <mat-nav-list>
+    <a *ngFor="let item of content" mat-list-item [href]="'/schlosswochen/' + item._id" > {{ item.title }} </a>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+</div>
