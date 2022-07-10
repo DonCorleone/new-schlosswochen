@@ -1,0 +1,3 @@
+<ng-container *ngIf="cards$ | async as cards">
+  <app-card [card]="cards.length > 0 ? cards[0] : undefined" class="h-full"></app-card>
+</ng-container>

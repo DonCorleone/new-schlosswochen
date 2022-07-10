@@ -1,6 +1,8 @@
 <div *ngIf="content$ | async as content">
   <mat-nav-list>
-    <a *ngFor="let item of content" mat-list-item [href]="'/schlosswochen/' + item._id" > {{ item.title }} </a>
-    <mat-divider></mat-divider>
+    <div *ngFor="let item of content">
+      <a mat-list-item [routerLink]="['/schlosswochen', item._id]" > {{ item.title }} </a>
+      <mat-divider></mat-divider>
+    </div>
   </mat-nav-list>
 </div>

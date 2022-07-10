@@ -5,12 +5,12 @@
     [opened]="!isScreenSmall"
     class="w-60 mat-elevation-z10"
   >
-    <mat-toolbar color="primary"> Menu </mat-toolbar>
-    <mat-nav-list>
-      <mat-list-item *ngFor="let content of content$ | async">
-        <div matLine [routerLink]="['/schlosswochen', content._id]">{{ content.title }}</div>
-      </mat-list-item>
-    </mat-nav-list>
+    <mat-toolbar color="primary">
+      <div class="flex justify-center w-full h-full">
+        <img src="assets/svg/logo-crown.svg" >
+      </div>
+    </mat-toolbar>
+<app-index></app-index>
   </mat-sidenav>
 
   <mat-sidenav-content class="flex flex-col">
