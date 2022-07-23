@@ -40,7 +40,6 @@ export class MainContentComponent implements OnInit, OnDestroy {
             active: true,
             gallery: '',
             markdown: '',
-            impressions: undefined,
             cards: undefined
           };
           return;
@@ -51,15 +50,15 @@ export class MainContentComponent implements OnInit, OnDestroy {
             if (content.length == 0) return;
             setTimeout(() => {
               this.content = this.contentService.contentById(s);
-              if (this.content?.impressions){
-                this.content.impressions.forEach( i => {
+              this.content?.cards?.forEach(c => {
+                c.impressions?.forEach( i => {
                   console.log("year " + i.year);
 
                   i.weeks.forEach(w => {
                     console.log("week " + w.number + " : " + new Date(w.dateStart).toString() + " - " + new Date(w.dateEnd).toString());
                   })
                 })
-              }
+              })
             }, 200);
           });
         });

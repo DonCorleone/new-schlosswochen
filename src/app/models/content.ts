@@ -6,7 +6,6 @@ export class Content {
   text: string = "";
   markdown: string = "";
   gallery: string = "";
-  impressions: Impression[] | undefined;
   cards: Card[] | undefined;
 }
 export interface Card {
@@ -15,6 +14,7 @@ export interface Card {
   imageUrl: string;
   title: string;
   markdown: string;
+  impressions: Impression[] | undefined;
 }
 export interface Week {
   number: number;

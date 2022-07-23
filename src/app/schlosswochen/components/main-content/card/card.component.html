@@ -4,8 +4,8 @@
   </mat-card-header>
   <img *ngIf="card.imageUrl" mat-card-image [src]="card.imageUrl" alt="Image" class="grayscale">
   <!--img src="../../../../../assets/svg/logo.svg"-->
-  <mat-card-content *ngIf="card.markdown; else fallback" class="text-terre-ombre-brule">
-    <p >
+  <mat-card-content class="text-terre-ombre-brule">
+    <p *ngIf="card.markdown">
       <markdown
         class="prose dark:prose-invert"
         [src]="'/assets/markdown/' + card.markdown + '.md'"
@@ -13,9 +13,9 @@
     </p>
     <app-maps *ngIf="card.map"></app-maps>
     <app-index *ngIf="card.index"></app-index>
-  </mat-card-content>
-  <mat-card-content>
-    <ng-template #fallback>
-    </ng-template>
+    <app-impressions
+      *ngIf="card.impressions"
+      [card]="card"
+    ></app-impressions>
   </mat-card-content>
 </mat-card>
