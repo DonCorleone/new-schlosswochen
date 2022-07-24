@@ -5,8 +5,7 @@ import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css'],
+  templateUrl: './maps.component.html'
 })
 export class MapsComponent implements OnInit {
   zoom = 15;

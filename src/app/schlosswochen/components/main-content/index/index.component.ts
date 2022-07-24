@@ -6,6 +6,13 @@ import { ContentService } from '../../../../services/content.service';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
+  styles: [
+    `
+      div div:last-child mat-divider {
+        display: none;
+      }
+    `,
+  ],
 })
 export class IndexComponent {
   content$: Observable<Content[]> = this.contentService.content;

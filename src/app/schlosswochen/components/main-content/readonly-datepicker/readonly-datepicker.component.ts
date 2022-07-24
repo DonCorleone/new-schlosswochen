@@ -4,8 +4,7 @@ import {Week} from "../../../../models/content";
 
 @Component({
   selector: 'app-readonly-datepicker',
-  templateUrl: './readonly-datepicker.component.html',
-  styleUrls: ['./readonly-datepicker.component.css']
+  templateUrl: './readonly-datepicker.component.html'
 })
 export class ReadonlyDatepickerComponent implements OnInit{
 

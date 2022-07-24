@@ -9,8 +9,7 @@ import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-swiper',
-  templateUrl: './swiper.component.html',
-  styleUrls: ['./swiper.component.css'],
+  templateUrl: './swiper.component.html'
 })
 export class SwiperComponent implements OnInit, OnDestroy {
   config: SwiperOptions = {

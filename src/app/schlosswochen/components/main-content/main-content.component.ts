@@ -1,18 +1,20 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {
-  EMPTY,
-  map, Observable,
-  Subject,
-  takeUntil,
-} from 'rxjs';
+import { map, Subject, takeUntil } from 'rxjs';
 import { Content } from '../../../models/content';
 import { ContentService } from '../../../services/content.service';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.css'],
+  styles: [
+    `
+      markdown > p {
+        display: flex;
+        flex-direction: column;
+      }
+    `,
+  ],
 })
 export class MainContentComponent implements OnInit, OnDestroy {
   content: Content | undefined = undefined;
@@ -40,7 +42,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
             active: true,
             gallery: '',
             markdown: '',
-            cards: undefined
+            cards: undefined,
           };
           return;
         }
@@ -50,15 +52,22 @@ export class MainContentComponent implements OnInit, OnDestroy {
             if (content.length == 0) return;
             setTimeout(() => {
               this.content = this.contentService.contentById(s);
-              this.content?.cards?.forEach(c => {
-                c.impressions?.forEach( i => {
-                  console.log("year " + i.year);
+              this.content?.cards?.forEach((c) => {
+                c.impressions?.forEach((i) => {
+                  console.log('year ' + i.year);
 
-                  i.weeks.forEach(w => {
-                    console.log("week " + w.number + " : " + new Date(w.dateStart).toString() + " - " + new Date(w.dateEnd).toString());
-                  })
-                })
-              })
+                  i.weeks.forEach((w) => {
+                    console.log(
+                      'week ' +
+                        w.number +
+                        ' : ' +
+                        new Date(w.dateStart).toString() +
+                        ' - ' +
+                        new Date(w.dateEnd).toString()
+                    );
+                  });
+                });
+              });
             }, 200);
           });
         });

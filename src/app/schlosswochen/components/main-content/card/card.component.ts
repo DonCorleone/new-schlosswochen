@@ -1,11 +1,16 @@
 import { Component, Input } from '@angular/core';
-import { Card, Content } from '../../../../models/content';
-import {EMPTY, Observable} from "rxjs";
+import { Card } from '../../../../models/content';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  styles: [
+    `
+      img[mat-card-image] {
+        max-width: unset;
+      }
+    `,
+  ],
 })
 export class CardComponent {
   @Input() card: Card | undefined;
