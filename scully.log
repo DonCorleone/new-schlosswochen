@@ -1,0 +1,35 @@
+
+      =====================================================================================================
+      Config file "./scully.schlosswochen-ch.config.ts" not found, only rendering routes without parameters
+      The config file should have a name that is formated as:
+          scully.<projectName>.config.ts
+      where <projectName> is the name of the project as defined in the 'angular.json' file
+      If you meant to build a different project as undefined you can use:
+          --project differentProjectName as a cmd line option
+
+      When you are in a mixed mono-repo you might need to use the --pjFirst flag.
+       which will look for package.json instead of angular.json to find the 'root' of the project.
+    =====================================================================================================
+The option outDir isn't configured, using default folder "./dist/static/".No routes defined in "" Deprecation Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin your scully.schlosswochen-ch.config.ts
+         file. For your convenience, we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choice.
+         for Puppeteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.schlosswochen-ch.config.ts file.
+
+          When you get this warning while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+
+(You can skip this, or any future question by using the --noPrompt flag)
+No configuration for route "/schlosswochen/:id" found. Skipping
+handleUnknownRoute: "/undefined/assets/images/2021-3_f3a68933-5807-46f6-8b90-f0009c30f9b6.jpg?nf_resize=fit&w=959", 404:""
+handleUnknownRoute: "/undefined/assets/images/2021-3_f3a68933-5807-46f6-8b90-f0009c30f9b6.jpg?nf_resize=fit&w=959", 404:""
