@@ -7,7 +7,7 @@ import localeDeCH from '@angular/common/locales/de-CH';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'new-schlosswochen-ch';
+  title = 'schlosswochen-ch';
 
   ngOnInit() {
     registerLocaleData(localeDeCH, 'de-CH');

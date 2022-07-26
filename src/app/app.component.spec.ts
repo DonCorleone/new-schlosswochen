@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'new-schlosswochen-ch'`, () => {
+  it(`should have as title 'schlosswochen-ch'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('new-schlosswochen-ch');
+    expect(app.title).toEqual('schlosswochen-ch');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('new-schlosswochen-ch app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('schlosswochen-ch app is running!');
   });
 });

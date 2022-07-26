@@ -5,7 +5,7 @@ import '@scullyio/scully-plugin-puppeteer'
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
-  projectName: "new-schlosswochen-ch",
+  projectName: "schlosswochen-ch",
   // add spsModulePath when using de Scully Platform Server,
   outDir: './dist/static',
   routes: {

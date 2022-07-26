@@ -1,4 +1,4 @@
-![Natalie Wieland-Hofer](https://new.schlosswochen.ch/assets/images/team-natalie.jpg "Natalie Wieland-Hofer")
+![Natalie Wieland-Hofer](https://schlosswochen.ch/assets/images/team-natalie.jpg "Natalie Wieland-Hofer")
 
 Leitung Kinderkultur und Pavillon Tribschenhorn, Kunst- und Kulturvermittlerin, Kindergärtnerin und Mutter von zwei Kindern.
 

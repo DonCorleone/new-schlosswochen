@@ -1,4 +1,4 @@
-![Marianne Hofer](https://new.schlosswochen.ch/assets/images/team-marianne.jpg "Marianne Hofer")
+![Marianne Hofer](https://schlosswochen.ch/assets/images/team-marianne.jpg "Marianne Hofer")
 
 Dozentin für Didaktik, Schultheater und Figurentheater am Kantonalen Kindergartenseminar Luzern
 

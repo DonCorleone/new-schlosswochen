@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "new-schlosswochen-ch": {
+    "schlosswochen-ch": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/new-schlosswochen-ch",
+            "outputPath": "dist/schlosswochen-ch",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -87,13 +87,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "new-schlosswochen-ch:build:production"
+              "browserTarget": "schlosswochen-ch:build:production"
             },
             "custom": {
-              "browserTarget": "new-schlosswochen-ch:build:custom"
+              "browserTarget": "schlosswochen-ch:build:custom"
             },
             "development": {
-              "browserTarget": "new-schlosswochen-ch:build:development"
+              "browserTarget": "schlosswochen-ch:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "new-schlosswochen-ch:build"
+            "browserTarget": "schlosswochen-ch:build"
           }
         },
         "test": {
@@ -125,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "new-schlosswochen-ch"
+  "defaultProject": "schlosswochen-ch"
 }

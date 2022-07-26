@@ -1,4 +1,4 @@
-![Robert Hofer](https://new.schlosswochen.ch/assets/images/team-robert.jpg "Robert Hofer")
+![Robert Hofer](https://schlosswochen.ch/assets/images/team-robert.jpg "Robert Hofer")
 
 Sekundarlehrer
 
