@@ -7,14 +7,11 @@
       <mat-accordion class="example-headers-align" multi>
           <mat-expansion-panel *ngFor="let week of impression.weeks" class="mb-4" >
             <mat-expansion-panel-header>
-              Woche {{week.number}}
+              <span class="text-rouge-rubia text-neutral-400">Woche {{week?.number}} :</span><span class="pl-3">{{ week.dateStart | date: 'dd.MMMM'}} - {{ week.dateEnd | date: 'dd.MMMM'}}</span>
+              <!--app-readonly-datepicker [week]="week" class="pt-6 -ml-2" ></app-readonly-datepicker-->
             </mat-expansion-panel-header>
             <ng-template matExpansionPanelContent>
-              <div class="flex flex-row items-baseline flex-wrap">
-                <p class="pr-4">Zeitraum</p>
-                <app-readonly-datepicker [week]="week"></app-readonly-datepicker>
-              </div>
-              <app-swiper [year] = impression.year [week] = week.number></app-swiper>
+              <app-swiper [year]="impression.year" [week]="week.number"></app-swiper>
             </ng-template>
           </mat-expansion-panel>
         </mat-accordion>
