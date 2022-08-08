@@ -18,7 +18,7 @@ import { SwiperModule } from '../shared/swiper/swiper.module';
 import { CardComponent } from './components/main-content/card/card.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapsComponent } from './components/main-content/maps/maps.component';
-import {HttpClientJsonpModule} from "@angular/common/http";
+import { HttpClientJsonpModule } from '@angular/common/http';
 import { IndexComponent } from './components/main-content/index/index.component';
 import { WelcomeComponent } from './components/main-content/welcome/welcome.component';
 
@@ -59,7 +59,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MarkdownModule.forChild(),
     SwiperModule,
-    GoogleMapsModule
+    GoogleMapsModule,
   ],
   providers: [
     ContentService,
