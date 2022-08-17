@@ -22,7 +22,13 @@ export interface Week {
   dateEnd: Date;
 }
 
+export interface file {
+  name: string;
+  displayName: string;
+}
+
 export interface Impression {
+  files: file[];
   year: number;
   weeks: Week[];
 }
