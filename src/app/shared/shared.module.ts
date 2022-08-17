@@ -12,6 +12,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatExpansionModule} from "@angular/material/expansion";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [],
@@ -29,6 +30,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
     MatFormFieldModule,
     MatNativeDateModule,
     MatExpansionModule,
+    MatChipsModule
   ],
 })
 export class SharedModule {}
