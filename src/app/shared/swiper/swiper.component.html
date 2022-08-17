@@ -9,6 +9,6 @@
   <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
   <!-- Add Arrows -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+  <div [ngClass]="autoplay ? '' : 'swiper-button-next'" class=""></div>
+  <div [ngClass]="autoplay ? '' : 'swiper-button-prev'" class=""></div>
 </swiper>

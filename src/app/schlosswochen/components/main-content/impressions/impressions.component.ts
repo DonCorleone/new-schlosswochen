@@ -3,12 +3,7 @@ import { Card } from '../../../../models/content';
 
 @Component({
   selector: 'app-impressions',
-  templateUrl: './impressions.component.html',
-  styles: [
-    `
-
-    `
-  ],
+  templateUrl: './impressions.component.html'
 })
 export class ImpressionsComponent {
   @Input() card: Card | undefined;
