@@ -1,32 +1,28 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { EMPTY, map, Observable, Subject, takeUntil } from 'rxjs';
 import { SwiperOptions } from 'swiper';
-import {
-  ImagesService, Netlifile,
-} from '../../services/images.service';
+import { ImagesService, Netlifile } from '../../services/images.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import {environment} from "../../../environments/environment";
+import { environment } from '../../../environments/environment';
+import { AutoplayOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-swiper',
-  templateUrl: './swiper.component.html'
+  templateUrl: './swiper.component.html',
+  styles: [
+    `
+      .swiper-button-disabled {
+        display: none;
+      }
+    `,
+  ],
 })
 export class SwiperComponent implements OnInit, OnDestroy {
-  config: SwiperOptions = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    spaceBetween: 30,
-    lazy: true,
-  };
-
   @Input() week: number = -1;
   @Input() year: number = -1;
+  @Input() autoplay: AutoplayOptions | undefined;
+
+  config: SwiperOptions = {};
 
   files$: Observable<Netlifile[]> = EMPTY;
 
@@ -37,8 +33,18 @@ export class SwiperComponent implements OnInit, OnDestroy {
     private breakpointObserver: BreakpointObserver
   ) {}
 
-
   ngOnInit(): void {
+    this.config = {
+      autoplay: this.autoplay ?? false,
+      pagination: !this.autoplay,
+      createElements: !this.autoplay,
+      navigation: this.autoplay ? false : {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 30,
+      lazy: true,
+    };
     this.breakpointObserver
       .observe([
         Breakpoints.XSmall,
@@ -54,15 +60,17 @@ export class SwiperComponent implements OnInit, OnDestroy {
             const match = query.match('\\(max-width:\\s(\\d+)\\.98px\\)');
             const width = match?.length ? match[1] : '2048';
 
-            this.files$ = this.imageService.listAssets(`/assets/images/${this.year}-${this.week}`).pipe(
-              map((p) => {
-                p.forEach(
-                  (image) =>
-                    (image.path = `${environment.URL}${image.path}?nf_resize=fit&w=${width}`)
-                );
-                return p;
-              })
-            );
+            this.files$ = this.imageService
+              .listAssets(`/assets/images/${this.year}-${this.week}`)
+              .pipe(
+                map((p) => {
+                  p.forEach(
+                    (image) =>
+                      (image.path = `${environment.URL}${image.path}?nf_resize=fit&w=${width}`)
+                  );
+                  return p;
+                })
+              );
             break;
           }
         }
