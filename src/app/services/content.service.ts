@@ -30,6 +30,7 @@ export class ContentService {
 
   loadAll() {
 
+    //getter
     this.http
       .get<GetContentResponse>('/.netlify/functions/get-content', {})
       .pipe(
