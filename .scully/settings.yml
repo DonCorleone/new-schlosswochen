@@ -6,6 +6,6 @@ hostName: localhost
 projectName: schlosswochen-ch
 homeFolder: /Users/administrator/Documents/scm/schlosswochen/schlosswochen-ch
 distFolder: dist/schlosswochen-ch
-outDir: /Users/administrator/Documents/scm/schlosswochen/schlosswochen-ch/dist/static/
+outDir: /Users/administrator/Documents/scm/schlosswochen/schlosswochen-ch/dist/static
 handle404: ''
 allowErrorCollect: true

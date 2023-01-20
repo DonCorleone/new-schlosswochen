@@ -1,1 +1,1 @@
-[{"route":"/schlosswochen"},{"route":"/"}]
+[{"route":"/schlosswochen/:id"},{"route":"/schlosswochen"},{"route":"/"}]
