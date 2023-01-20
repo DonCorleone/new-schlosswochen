@@ -3,6 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, catchError, map, Observable, take } from 'rxjs';
 import { Content } from '../models/content';
 
+interface GetContentResponse {
+  message: Content[];
+}
+
 @Injectable()
 export class ContentService {
   private _content: BehaviorSubject<Content[]>;
@@ -25,16 +29,14 @@ export class ContentService {
   }
 
   loadAll() {
-    const contentUrl =
-      'https://data.mongodb-api.com/app/schlosswochen-ch-tfxqz/endpoint/content';
 
     this.http
-      .post(contentUrl, {})
+      .get<GetContentResponse>('/.netlify/functions/get-content', {})
       .pipe(
         take(1),
-        map((data) => {
-          // @ts-ignore
-          this.dataStore.content = data;
+        map((data: GetContentResponse) => {
+
+          this.dataStore.content = data.message;
           this._content.next(Object.assign({}, this.dataStore).content);
         }),
         catchError((err) => {
