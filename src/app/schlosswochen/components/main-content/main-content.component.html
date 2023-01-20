@@ -12,6 +12,15 @@
   <app-card *ngFor="let card of content.cards" [card]="card"></app-card>
 </div>
 <ng-template #elseBlock>
-  <app-welcome class="hidden md:block"></app-welcome>
-  <app-index class="block md:hidden"></app-index
-></ng-template>
+  <mat-accordion class="block md:hidden pb-3">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Menu
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <app-index></app-index>
+      </ng-template>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <app-welcome></app-welcome>
+</ng-template>

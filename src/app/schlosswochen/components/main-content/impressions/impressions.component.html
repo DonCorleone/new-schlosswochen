@@ -14,14 +14,14 @@
           </a>
         </mat-chip>
       </mat-chip-list>
-      <mat-accordion class="example-headers-align" multi>
+      <mat-accordion multi>
           <mat-expansion-panel *ngFor="let week of impression.weeks" class="mb-4" >
             <mat-expansion-panel-header>
               <span class="text-rouge-rubia text-neutral-400">Woche {{week?.number}} :</span><span class="pl-3">{{ week.dateStart | date: 'dd.MMMM'}} - {{ week.dateEnd | date: 'dd.MMMM'}}</span>
               <!--app-readonly-datepicker [week]="week" class="pt-6 -ml-2" ></app-readonly-datepicker-->
             </mat-expansion-panel-header>
             <ng-template matExpansionPanelContent>
-              <app-swiper [year]="impression.year" [week]="week.number"></app-swiper>
+              <app-swiper [year]="impression.year" [week]="week.number" [autoplay]="undefined"></app-swiper>
             </ng-template>
           </mat-expansion-panel>
         </mat-accordion>

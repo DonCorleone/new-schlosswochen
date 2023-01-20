@@ -18,11 +18,37 @@ export class ImagesService {
     };
 
     return this.http
-      .get<Netlifile[]>('https://api.netlify.com/api/v1' + `/sites/${environment.SITE_ID}/files/`, httpOptions)
-      .pipe(map((p) => p.filter((f) => f.path.startsWith(path))));
+      .get<Netlifile[]>(
+        'https://api.netlify.com/api/v1' +
+          `/sites/${environment.SITE_ID}/files/`,
+        httpOptions
+      )
+      .pipe(
+        map((p) => p.filter((f) => f.path.startsWith(path))),
+        map((x) => this.shuffle(x))
+      );
+  }
+
+  shuffle<T>(array: T[]): T[] {
+    let currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
   }
 }
-
 export interface Netlifile {
   id: string;
   path: string;
