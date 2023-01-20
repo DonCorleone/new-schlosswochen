@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, catchError, map, Observable, take } from 'rxjs';
 import { Content } from '../models/content';
 
-interface GetContentResponse {
+export interface GetContentResponse {
   message: Content[];
 }
 
