@@ -1,21 +1,35 @@
-<mat-card *ngIf="card" class="bg-vert-clair text-terre-ombre-brule">
-  <mat-card-header *ngIf="card.title">
-    <mat-card-title class="text-2xl">{{ card.title }}</mat-card-title>
-  </mat-card-header>
-  <img *ngIf="card.imageUrl" mat-card-image [src]="card.imageUrl" alt="Image" class="grayscale">
-  <!--img src="../../../../../assets/svg/logo.svg"-->
-  <mat-card-content class="bg-vert-59 text-terre-ombre-brule -ml-4 -mr-4 -mb-4 p-4">
-    <p *ngIf="card.markdown">
-      <markdown
-        class="prose dark:prose-invert"
-        [src]="'/assets/markdown/' + card.markdown + '.md'"
-      ></markdown>
-    </p>
-    <app-maps *ngIf="card.map"></app-maps>
-    <app-index *ngIf="card.index"></app-index>
-    <app-impressions
-      *ngIf="card.impressions"
-      [card]="card"
-    ></app-impressions>
-  </mat-card-content>
-</mat-card>
+<ng-container *ngIf="card">
+  <div class="mat-typography">
+    <mat-card *ngIf="card" class="bg-vert-clair text-terre-ombre-brule">
+      <mat-card-header *ngIf="card.title">
+        <mat-card-title>
+          <h1 class="text-rouge-rubia ">{{ card.title }}</h1>
+        </mat-card-title>
+      </mat-card-header>
+      <img
+        *ngIf="card.imageUrl"
+        mat-card-image
+        [src]="card.imageUrl"
+        alt="Image"
+        class="grayscale"
+      />
+      <!--img src="../../../../../assets/svg/logo.svg"-->
+      <mat-card-content
+        class="bg-vert-59 text-terre-ombre-brule -ml-4 -mr-4 -mb-4 p-4"
+      >
+        <p *ngIf="card.markdown">
+          <markdown
+            class="prose dark:prose-invert"
+            [src]="'/assets/markdown/' + card.markdown + '.md'"
+          ></markdown>
+        </p>
+        <app-maps *ngIf="card.map"></app-maps>
+        <app-index *ngIf="card.index"></app-index>
+        <app-impressions
+          *ngIf="card.impressions"
+          [card]="card"
+        ></app-impressions>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
