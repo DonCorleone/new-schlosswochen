@@ -1,4 +1,4 @@
-import { NgModule, SecurityContext } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -7,22 +7,40 @@ import { Routes, RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 
 import { MarkedOptions, MarkedRenderer } from 'ngx-markdown';
-import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientJsonpModule,
+  HttpClientModule,
+} from '@angular/common/http';
 import { SwiperModule } from './shared/swiper/swiper.module';
-import { DateAdapter } from '@angular/material/core';
-import { CustomDateAdapter } from './schlosswochen/components/main-content/readonly-datepicker/custom-date-adapter';
+import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { ImpressionsComponent } from './components/main-content/impressions/impressions.component';
+import { MapsComponent } from './components/main-content/maps/maps.component';
+import { IndexComponent } from './components/main-content/index/index.component';
+import { ReadonlyDatepickerComponent } from './components/main-content/readonly-datepicker/readonly-datepicker.component';
+import { WelcomeComponent } from './components/main-content/welcome/welcome.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { CardComponent } from './components/main-content/card/card.component';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from './shared/shared.module';
+import { ContentService } from './services/content.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { CustomDateAdapter } from './components/main-content/readonly-datepicker/custom-date-adapter';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import {GoogleMapsModule} from "@angular/google-maps";
 
 const routes: Routes = [
   {
-    path: 'schlosswochen',
-    loadChildren: () =>
-      import('./schlosswochen/schlosswochen.module').then(
-        (m) => m.SchlosswochenModule
-      ),
+    path: ':title',
+    component: MainContentComponent,
   },
-  { path: '**', redirectTo: 'schlosswochen' },
+  {
+    path: '',
+    component: MainContentComponent,
+  },
+  { path: '**', redirectTo: '/' },
 ];
 
 // function that returns `MarkedOptions` with renderer override
@@ -44,8 +62,24 @@ export function markedOptionsFactory(): MarkedOptions {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    MainContentComponent,
+    SidenavComponent,
+    ImpressionsComponent,
+    ReadonlyDatepickerComponent,
+    CardComponent,
+    MapsComponent,
+    IndexComponent,
+    WelcomeComponent,
+  ],
   imports: [
+    CommonModule,
+    SharedModule,
+    MarkdownModule.forChild(),
+    SwiperModule,
+    GoogleMapsModule,
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
@@ -57,10 +91,15 @@ export function markedOptionsFactory(): MarkedOptions {
         useFactory: markedOptionsFactory,
       },
     }),
+    HttpClientJsonpModule,
     ScullyLibModule,
-    HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [
+    ContentService,
+    MatIconRegistry,
+    { provide: MAT_DATE_LOCALE, useValue: 'de-CH' },
+    { provide: DateAdapter, useClass: CustomDateAdapter },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

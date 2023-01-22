@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Content } from '../../../../models/content';
+import { Content } from '../../../models/content';
 import { Observable } from 'rxjs';
-import { ContentService } from '../../../../services/content.service';
+import { ContentService } from '../../../services/content.service';
 
 @Component({
   selector: 'app-index',
