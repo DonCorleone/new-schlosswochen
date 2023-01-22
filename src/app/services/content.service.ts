@@ -24,8 +24,8 @@ export class ContentService {
     return this._content.asObservable();
   }
 
-  contentById(id: string): Content | undefined {
-    return this.dataStore.content.find((x) => x._id == id);
+  contentByTitle(title: string): Content | undefined {
+    return this.dataStore.content.find((x) => x.title == title);
   }
 
   loadAll() {

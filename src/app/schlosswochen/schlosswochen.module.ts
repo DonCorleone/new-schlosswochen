@@ -28,7 +28,7 @@ const routes: Routes = [
     component: SchlosswochenAppComponent,
     children: [
       {
-        path: ':id',
+        path: ':title',
         component: MainContentComponent,
       },
       {

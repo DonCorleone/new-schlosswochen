@@ -28,7 +28,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.router.params
       .pipe(
-        map((p) => p['id']),
+        map((p) => p['title']),
         takeUntil(this._ngDestroy$)
       )
       .subscribe((s) => {
@@ -51,7 +51,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
           this.contentService.content.subscribe((content) => {
             if (content.length == 0) return;
             setTimeout(() => {
-              this.content = this.contentService.contentById(s);
+              this.content = this.contentService.contentByTitle(s);
               this.content?.cards?.forEach((c) => {
                 c.impressions?.forEach((i) => {
                   console.log('year ' + i.year);
