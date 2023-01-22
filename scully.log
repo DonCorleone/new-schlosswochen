@@ -295,3 +295,24 @@ handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+Folder "./scully" doesn't seem to contain custom plugins
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npx scully --scanRoutes"----------------------------------No configuration for route "/schlosswochen/:id" found. Skipping
+
+
+
+
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
