@@ -2,15 +2,15 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { EMPTY, Observable, Subject, takeUntil } from 'rxjs';
 import { MatSidenav } from '@angular/material/sidenav';
-import { ContentService } from '../../../services/content.service';
-import { Content } from '../../../models/content';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { Content } from '../../models/content';
+import { ContentService } from '../../services/content.service';
 
 const SMALL_WIDTH_BREAKPOINT = 768;
 
 @Component({
   selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html'
+  templateUrl: './sidenav.component.html',
 })
 export class SidenavComponent implements OnInit, OnDestroy {
   isScreenSmall: boolean = false;

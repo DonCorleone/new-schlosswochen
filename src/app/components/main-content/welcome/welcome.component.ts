@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Card } from '../../../../models/content';
-import { ContentService } from '../../../../services/content.service';
 import { EMPTY, map, Observable, Subject, takeUntil } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { environment } from '../../../../../environments/environment';
+import { ContentService } from '../../../services/content.service';
+import { Card } from '../../../models/content';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-welcome',
-  templateUrl: './welcome.component.html'
+  templateUrl: './welcome.component.html',
 })
 export class WelcomeComponent implements OnInit, OnDestroy {
   cards$: Observable<Card[] | undefined> = EMPTY;
@@ -37,7 +37,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
             this.cards$ = this.contentService.content.pipe(
               map((x) => {
                 const cardsDef = x.find(
-                  (y) => y._id == '629a212b215ee1a4bfe405e7'
+                  (y) => y.title == 'Start'
                 )?.cards;
                 const cardsnew: Card[] = [];
                 if (cardsDef) {

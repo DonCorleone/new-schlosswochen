@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Subject, takeUntil } from 'rxjs';
-import { Content } from '../../../models/content';
-import { ContentService } from '../../../services/content.service';
+import { Content } from '../../models/content';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-main-content',
@@ -28,7 +28,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.router.params
       .pipe(
-        map((p) => p['id']),
+        map((p) => p['title']),
         takeUntil(this._ngDestroy$)
       )
       .subscribe((s) => {

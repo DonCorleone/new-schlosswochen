@@ -1,13 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {MatDatepickerInputEvent} from "@angular/material/datepicker";
-import {Week} from "../../../../models/content";
+import { Component, Input, OnInit } from '@angular/core';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { Week } from '../../../models/content';
 
 @Component({
   selector: 'app-readonly-datepicker',
-  templateUrl: './readonly-datepicker.component.html'
+  templateUrl: './readonly-datepicker.component.html',
 })
-export class ReadonlyDatepickerComponent implements OnInit{
-
+export class ReadonlyDatepickerComponent implements OnInit {
   @Input() week: Week | undefined;
   private initStart: Date | undefined;
   private initEnd: Date | undefined;
@@ -17,8 +16,7 @@ export class ReadonlyDatepickerComponent implements OnInit{
     this.initEnd = this.week?.dateEnd;
   }
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-
-    if (this.week){
+    if (this.week) {
       this.week.dateStart = this.initStart ?? new Date();
       this.week.dateEnd = this.initEnd ?? new Date();
     }
