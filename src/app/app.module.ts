@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: '**', redirectTo: 'schlosswochen' },
 ];
 
-// function that returns `MarkedOptions` with renderer override
+// function that returns `MarkedOptions` with renderer override ..
 export function markedOptionsFactory(): MarkedOptions {
   const renderer = new MarkedRenderer();
 
