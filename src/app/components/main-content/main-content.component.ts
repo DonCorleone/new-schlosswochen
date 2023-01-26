@@ -17,7 +17,7 @@ import { ContentService } from '../../services/content.service';
   ],
 })
 export class MainContentComponent implements OnInit, OnDestroy {
-  content: Content | undefined = undefined;
+  content?: Content = undefined;
   _ngDestroy$: Subject<void> = new Subject();
 
   constructor(

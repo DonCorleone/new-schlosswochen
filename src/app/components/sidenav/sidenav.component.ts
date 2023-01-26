@@ -14,7 +14,7 @@ const SMALL_WIDTH_BREAKPOINT = 768;
 })
 export class SidenavComponent implements OnInit, OnDestroy {
   isScreenSmall: boolean = false;
-  private _ngDestroy$ = new Subject<void>();
+  private _ngDestroy$ = new Subject();
   content$: Observable<Content[]> = EMPTY;
 
   @ViewChild(MatSidenav) sideNav: MatSidenav | undefined;
@@ -46,7 +46,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this._ngDestroy$.next();
+    this._ngDestroy$.next(true);
     this._ngDestroy$.complete();
   }
 }
