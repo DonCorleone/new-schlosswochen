@@ -34,6 +34,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainContentComponent },
+  { path: 'Eckdaten', component: MainContentComponent },
   { path: ':title', component: MainContentComponent }
 ];
 
