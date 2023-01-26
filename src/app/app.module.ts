@@ -32,15 +32,9 @@ import { CustomDateAdapter } from './components/main-content/readonly-datepicker
 import { ScullyLibModule } from '@scullyio/ng-lib';
 
 const routes: Routes = [
-  {
-    path: ':title',
-    component: MainContentComponent,
-  },
-  {
-    path: '',
-    component: MainContentComponent,
-  },
-  { path: '**', redirectTo: '/' },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'main', component: MainContentComponent },
+  { path: ':title', component: MainContentComponent }
 ];
 
 // function that returns `MarkedOptions` with renderer override
