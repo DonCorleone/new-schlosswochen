@@ -268,3 +268,106 @@ handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+----------------------------------   To discover new routes in the angular app use "npx scully --scanRoutes"----------------------------------NOTICE:
+****************************************************************************************
+  This is a development tool for Scully applications.
+  You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************Using stored unhandled routes!.
+
+
+
+
+Could not fetch data for route "/schlosswochen/:id"
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+----------------------------------No configuration for route "/schlosswochen/:id" found. SkippingUsing stored unhandled routes!.----------------------------------   To discover new routes in the angular app use "npx scully --scanRoutes"
+
+
+
+
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npx scully --scanRoutes"----------------------------------No configuration for route "/schlosswochen/:id" found. Skipping
+
+
+
+
+Puppeteer error while rendering "schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Newsletter"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+Puppeteer error while rendering "schlosswochen/Start"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Newsletter"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Start"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Newsletter"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Start"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+Puppeteer error while rendering "schlosswochen/Schlosswochen"
+ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+ we will retry rendering this page up to 3 times.
+----------------------------------No configuration for route "/schlosswochen/:id" found. Skipping   To discover new routes in the angular app use "npx scully --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+----------------------------------No configuration for route "/schlosswochen/:id" found. Skipping   To discover new routes in the angular app use "npx scully --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""
+handleUnknownRoute: "/.netlify/functions/get-content", 404:""

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map, Subject, takeUntil } from 'rxjs';
 import { Content } from '../../../models/content';
 import { ContentService } from '../../../services/content.service';
+import {SeoService} from "../../../services/seo.service";
 
 @Component({
   selector: 'app-main-content',
@@ -22,7 +23,8 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: ActivatedRoute,
-    private contentService: ContentService
+    private contentService: ContentService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
@@ -31,9 +33,9 @@ export class MainContentComponent implements OnInit, OnDestroy {
         map((p) => p['title']),
         takeUntil(this._ngDestroy$)
       )
-      .subscribe((s) => {
+      .subscribe((title: string) => {
         this.content = undefined;
-        if (!s) {
+        if (!title) {
           this.content = {
             title: '',
             text: '',
@@ -47,11 +49,16 @@ export class MainContentComponent implements OnInit, OnDestroy {
           return;
         }
 
+        this.seoService.setDescription(
+          'Schlosswochen - das Ferienangebot in Luzern für Kinder ab 5 Jahren. Auf dem Tribschenhorn in Luzern. Während den Sommerferien. Kinderbetreuung und Stärkung.', title
+        );
+        this.seoService.setTitle('Schlosswochen', title);
+
         setTimeout(() => {
           this.contentService.content.subscribe((content) => {
             if (content.length == 0) return;
             setTimeout(() => {
-              this.content = this.contentService.contentByTitle(s);
+              this.content = this.contentService.contentByTitle(title);
               this.content?.cards?.forEach((c) => {
                 c.impressions?.forEach((i) => {
                   console.log('year ' + i.year);

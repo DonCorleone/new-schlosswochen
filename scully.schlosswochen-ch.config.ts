@@ -6,15 +6,22 @@ export const config: ScullyConfig = {
   projectName: 'schlosswochen-ch',
   // add spsModulePath when using de Scully Platform Server,
   outDir: './dist/static',
+  extraRoutes: [
+    '/schlosswochen',
+    '/schlosswochen/Newsletter',
+    '/schlosswochen/Start',
+    '/schlosswochen/Schlosswochen',
+    '/schlosswochen/Anmelden',
+    '/schlosswochen/Impressionen',
+    '/schlosswochen/Eckdaten',
+    '/schlosswochen/Tagesplan',
+    '/schlosswochen/Ort',
+    '/schlosswochen/Details',
+    '/schlosswochen/Verpflegung',
+    '/schlosswochen/Team',
+    '/schlosswochen/AGB',
+    '/schlosswochen/Covid-19'
+  ],
   routes: {
-    '/schlosswochen/:id': {
-      serverTimeout: 300000,
-      type: 'json',
-      id: {
-        url: 'https://new-schlosswochen.netlify.app/.netlify/functions/get-content',
-        resultsHandler: (response: GetContentResponse) => response.message[0],
-        property: ':id',
-      },
-    },
   },
 };
