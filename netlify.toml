@@ -19,9 +19,3 @@ external_node_modules = ["axios"]
   no-cache,
   no-store,
   must-revalidate'''
-
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-[plugins.inputs]
-buildDir = "dist/schlosswochen-ch"
