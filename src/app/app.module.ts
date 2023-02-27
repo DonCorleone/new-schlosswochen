@@ -7,12 +7,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 
 import { MarkedOptions, MarkedRenderer } from 'ngx-markdown';
-import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientJsonpModule,
+  HttpClientModule,
+} from '@angular/common/http';
 import { SwiperModule } from './shared/swiper/swiper.module';
 import { DateAdapter } from '@angular/material/core';
 import { CustomDateAdapter } from './schlosswochen/components/main-content/readonly-datepicker/custom-date-adapter';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import {GoogleMapsModule} from "@angular/google-maps";
+import { GoogleMapsModule } from '@angular/google-maps';
 
 const routes: Routes = [
   {
@@ -58,7 +62,7 @@ export function markedOptionsFactory(): MarkedOptions {
       },
     }),
     ScullyLibModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
