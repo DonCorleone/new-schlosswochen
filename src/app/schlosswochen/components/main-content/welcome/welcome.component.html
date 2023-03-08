@@ -5,12 +5,19 @@
         <h1 class="text-terre-ombre-brule">Schlosswochen - Das Ferienangebot für Kinder in Luzern</h1>
       </mat-card-title>
     </mat-card-header>
+    <mat-card-content
+      class="bg-vert-59 text-terre-ombre-brule -ml-4 -mr-4 -mb-4 p-4"
+    >
+      <h2 class="text-white">Daten {{ year }}</h2>
+      <app-weeks
+        [weeks]="weeks"
+        [year]="year"
+        [showSwiper]="false"
+        [hideToggle]="true" >
+      </app-weeks>
+    </mat-card-content>
+
   </mat-card>
 </div>
-<!--app-weeks--
-  [weeks]="weeks"
-  [year]="year"
-  [showSwiper]="false"
-  [hideToggle]="true" >
-</app-weeks-->
+
 <app-swiper [year]="0" [week]="0" [autoplay]="{ delay: 2000 }"></app-swiper>
