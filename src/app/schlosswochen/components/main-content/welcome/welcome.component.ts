@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {Card, Week} from '../../../../models/content';
+import {Card, Content, Week} from '../../../../models/content';
 import { ContentService } from '../../../../services/content.service';
 import { EMPTY, map, Observable, Subject, takeUntil } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -22,24 +22,24 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-/*    this.contentService.content.pipe(
+    this.contentService.content.pipe(
       takeUntil(this._ngDestroy$),
-      map((x) => {
-        const cardsDef = x.find(
-          (y) => y.title == 'Impressionen'
-        )?.cards;
-        if (cardsDef) {
-          const currentImpression = cardsDef[0].impressions?.sort((a, b) => {
-            return a.year - b.year;
-          }).pop();
+    ).subscribe( (x: Content[]) => {
+      const cardsDef = x.find(
+        (y) => y.title == 'Impressionen'
+      )?.cards;
+      if (cardsDef) {
+        const currentImpression = cardsDef[0].impressions?.sort((a, b) => {
+          return b.year - a.year;
+        })[0];
 
-          if (currentImpression) {
-            this.year = currentImpression.year;
-            this.weeks = currentImpression.weeks;
-          }
+        if (currentImpression) {
+          this.year = currentImpression.year;
+          this.weeks = currentImpression.weeks;
         }
-      })
-    ).subscribe();*/
+      }
+    });
+
 
     this.breakpointObserver
       .observe([
