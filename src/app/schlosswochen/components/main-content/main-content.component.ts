@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map, Subject, takeUntil } from 'rxjs';
 import { Content } from '../../../models/content';
 import { ContentService } from '../../../services/content.service';
-import {SeoService} from "../../../services/seo.service";
+import { SeoService } from '../../../services/seo.service';
 
 @Component({
   selector: 'app-main-content',
@@ -50,7 +50,8 @@ export class MainContentComponent implements OnInit, OnDestroy {
         }
 
         this.seoService.setDescription(
-          'Schlosswochen - das Ferienangebot in Luzern für Kinder ab 5 Jahren. Auf dem Tribschenhorn in Luzern. Während den Sommerferien. Kinderbetreuung und Stärkung.', title
+          'Schlosswochen - das Ferienangebot in Luzern für Kinder ab 5 Jahren. Auf dem Tribschenhorn in Luzern. Während den Sommerferien. Kinderbetreuung und Stärkung.',
+          title
         );
         this.seoService.setTitle('Schlosswochen', title);
 
@@ -64,14 +65,18 @@ export class MainContentComponent implements OnInit, OnDestroy {
                   console.log('year ' + i.year);
 
                   i.weeks.forEach((w) => {
-                    console.log(
-                      'week ' +
-                        w.number +
-                        ' : ' +
-                        new Date(w.dateStart).toString() +
-                        ' - ' +
-                        new Date(w.dateEnd).toString()
+                    // calculate the number of weeks
+                    const dateStart = new Date(w.dateStart);
+                    const dateEnd = new Date(w.dateEnd);
+                    const diffTime = Math.abs(
+                      dateEnd.getTime() - dateStart.getTime()
                     );
+                    const diffDays = Math.ceil(
+                      diffTime / (1000 * 60 * 60 * 24)
+                    );
+                    const weeknumber = Math.ceil(diffDays / 7);
+
+                    console.log('weeknumber ' + weeknumber);
                   });
                 });
               });
