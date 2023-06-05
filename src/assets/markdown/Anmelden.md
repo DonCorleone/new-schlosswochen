@@ -1,6 +1,6 @@
-## Die Anmeldeplattform wird in Kürze aufgeschaltet. 
+## Anmeldeplattform
 
-[Daten, Konditionen und eine Anleitung finden Sie hier](https://up.schlosswochen.ch)
+[Die Anmeldeplattform finden Sie hier:](https://up.schlosswochen.ch)
 
 
 Möchten Sie per E-Mail informiert werden?
