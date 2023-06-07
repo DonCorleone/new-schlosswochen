@@ -8,6 +8,8 @@ export class Content {
   gallery: string = "";
   cards: Card[] | undefined;
 }
+
+
 export interface Card {
   index: boolean;
   map: boolean;
@@ -15,6 +17,7 @@ export interface Card {
   title: string;
   markdown: string;
   impressions: Impression[] | undefined;
+  buttons: Button[] | undefined;
 }
 export interface Week {
   number: number;
@@ -31,4 +34,8 @@ export interface Impression {
   files: file[];
   year: number;
   weeks: Week[];
+}
+interface Button {
+  title: string;
+  url: string;
 }

@@ -29,6 +29,7 @@
           *ngIf="card.impressions"
           [card]="card"
         ></app-impressions>
+        <app-buttons *ngIf="card.buttons" [card]="card"></app-buttons>
       </mat-card-content>
     </mat-card>
   </div>

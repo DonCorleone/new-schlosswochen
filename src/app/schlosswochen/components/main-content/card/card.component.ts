@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Card } from '../../../../models/content';
+import {C} from "@angular/cdk/keycodes";
 
 @Component({
   selector: 'app-card',
@@ -14,4 +15,5 @@ import { Card } from '../../../../models/content';
 })
 export class CardComponent {
   @Input() card: Card | undefined;
+  protected readonly C = C;
 }
