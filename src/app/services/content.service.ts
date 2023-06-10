@@ -37,7 +37,7 @@ export class ContentService {
         take(1),
         map((data: GetContentResponse) => {
 
-          this.dataStore.content = data.message;
+          this.dataStore.content = data.message.filter(x => x.active);
           this._content.next(Object.assign({}, this.dataStore).content);
         }),
         catchError((err) => {
