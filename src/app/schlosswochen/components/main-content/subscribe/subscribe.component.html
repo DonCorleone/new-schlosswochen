@@ -1,1 +1,44 @@
-<p>subscribe works!</p>
+<div class="mt-8 max-w-md">
+  <form
+    name="contact-form"
+    class="contact-form contactform"
+    method="post"
+    data-netlify="true"
+  >
+  <input type="hidden" name="form-name" value="contact-form" />
+    <div class="grid grid-cols-1 gap-6">
+      <label for="customer_prename" class="block"> 
+        <span class="text-bleu-ceruleen-pale text-base">Vorname</span>
+        <input
+        type="text"
+        name="customer_prename"
+        id="customer_prename"
+        class="mt-1 block w-full"
+        required
+      />
+      </label>
+      <label for="customer_surname" class="block"> 
+        <span class="text-bleu-ceruleen-pale text-base">Nachname</span>
+        <input
+        type="text"
+        name="customer_surname"
+        id="customer_surname"
+        class="mt-1 block w-full"
+        required
+      />
+      </label>
+      <label for="email_address" class="block">
+        <span class="text-bleu-ceruleen-pale text-base">e-Mail</span>
+        <input
+          type="email"
+          name="email_address"
+          id="email_address"
+          class="mt-1 block w-full"
+          placeholder="john@example.com"
+          required
+        />
+      </label>
+      <button mat-flat-button color="primary" class="bg-rouge-rubia text-bleu-ceruleen-pale" type="submit">Senden</button>
+    </div>
+  </form>
+</div>

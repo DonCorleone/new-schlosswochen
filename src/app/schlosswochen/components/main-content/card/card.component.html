@@ -30,6 +30,7 @@
           [card]="card"
         ></app-impressions>
         <app-buttons *ngIf="card.buttons" [card]="card"></app-buttons>
+        <app-subscribe *ngIf="card.subscribe"></app-subscribe>
       </mat-card-content>
     </mat-card>
   </div>

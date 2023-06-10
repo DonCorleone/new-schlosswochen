@@ -18,6 +18,7 @@ export interface Card {
   markdown: string;
   impressions: Impression[] | undefined;
   buttons: Button[] | undefined;
+  subscribe?: boolean;
 }
 export interface Week {
   number: number;

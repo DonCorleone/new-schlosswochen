@@ -21,6 +21,7 @@ import { IndexComponent } from './components/main-content/index/index.component'
 import { WelcomeComponent } from './components/main-content/welcome/welcome.component';
 import { WeeksComponent } from './components/main-content/weeks/weeks.component';
 import { ButtonsComponent } from "./components/main-content/buttons/buttons.component";
+import { SubscribeComponent } from './components/main-content/subscribe/subscribe.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,7 @@ const routes: Routes = [
     WelcomeComponent,
     WeeksComponent,
     ButtonsComponent,
+    SubscribeComponent,
   ],
   imports: [
     CommonModule,
