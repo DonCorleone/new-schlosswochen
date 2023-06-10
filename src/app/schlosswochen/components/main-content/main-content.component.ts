@@ -34,7 +34,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
         takeUntil(this._ngDestroy$)
       )
       .subscribe((title: string) => {
-        this.content = undefined;
+       // this.content = undefined;
         if (!title) {
           this.content = {
             title: '',
