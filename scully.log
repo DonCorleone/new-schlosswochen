@@ -296,7 +296,7 @@ handleUnknownRoute: "/.netlify/functions/get-content", 404:""
 Puppeteer error while rendering "schlosswochen"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
-Puppeteer error while rendering "schlosswochen/Newsletter"
+Puppeteer error while rendering "schlosswochen/newsletter"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
 handleUnknownRoute: "/.netlify/functions/get-content", 404:""
@@ -310,7 +310,7 @@ ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
 Puppeteer error while rendering "schlosswochen"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
-Puppeteer error while rendering "schlosswochen/Newsletter"
+Puppeteer error while rendering "schlosswochen/newsletter"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
 Puppeteer error while rendering "schlosswochen/Start"
@@ -322,7 +322,7 @@ ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
 Puppeteer error while rendering "schlosswochen"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
-Puppeteer error while rendering "schlosswochen/Newsletter"
+Puppeteer error while rendering "schlosswochen/newsletter"
 ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
  we will retry rendering this page up to 3 times.
 Puppeteer error while rendering "schlosswochen/Start"

@@ -26,7 +26,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
       takeUntil(this._ngDestroy$),
     ).subscribe( (x: Content[]) => {
       const cardsDef = x.find(
-        (y) => y.title == 'Impressionen'
+        (y) => y.title == 'impressionen'
       )?.cards;
       if (cardsDef) {
         const currentImpression = cardsDef[0].impressions?.sort((a, b) => {

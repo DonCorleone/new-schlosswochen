@@ -1,6 +1,6 @@
  
 
-Anmelden:
+anmelden:
     {
         text:
             '''            
@@ -24,7 +24,7 @@ Die Kinder werden von uns in ihrer Kreativität liebevoll unterstützt. Die Schl
     }
 
 
-Alter:
+alter:
     {
         text:
             '''            
@@ -33,7 +33,7 @@ Für Kinder ab 4½ bis 9 Jahren
     }
 
 
-Zeit:
+zeit:
     {
         text:
             '''            
@@ -42,7 +42,7 @@ Täglich von 9.00 Uhr - 15.00 Uhr. (Inklusive Mittagessen).
     }
 
 
-Kosten:
+kosten:
     {
         text:
             '''            
@@ -51,7 +51,7 @@ Fr. 270.- für eine Schlosswoche inkl. Werkmaterial & Mittagessen pro Kind Gesch
     }
 
 
-AGB:
+agb:
     {
         text:
             '''            
@@ -60,7 +60,7 @@ Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [www.
     }
 
 
-Ort:
+ort:
     {
         text:
             '''            
@@ -83,7 +83,7 @@ Google Maps [maps.google.com](https://www.google.ch/maps/place/Richard-Wagner-We
     }
 
 
-Details:
+details:
     {
         text:
             '''
@@ -114,7 +114,7 @@ Damit die Kinder einen optimalen Start in die Schlosswochen erleben, sind einige
     }
 
 
-Verpflegung:
+verpflegung:
     {
         text:
             '''
@@ -158,7 +158,7 @@ Möchten Sie per E-Mail informiert werden?
     }
 
 
-Tagesplan:
+tagesplan:
     {
         text:
             '''
