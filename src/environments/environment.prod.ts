@@ -4,5 +4,7 @@ export const environment = {
   URL: 'undefined',
   SITE_ID: 'undefined',
   API_KEY_NETLIFY: 'undefined',
-  API_KEY_GMAPS: "undefined"
+  API_KEY_GMAPS: "undefined",
+  NETLIFY_EMAILS_SECRET: "undefined",
+  EMAIL_SENDER: "undefined",
 };
