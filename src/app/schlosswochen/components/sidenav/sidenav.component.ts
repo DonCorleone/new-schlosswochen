@@ -10,8 +10,7 @@ const SMALL_WIDTH_BREAKPOINT = 768;
 
 @Component({
   selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './sidenav.component.html'
 })
 export class SidenavComponent implements OnInit, OnDestroy {
   isScreenSmall: boolean = false;
