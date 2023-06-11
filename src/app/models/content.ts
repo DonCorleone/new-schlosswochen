@@ -3,6 +3,7 @@ export class Content {
   sortorder: number = -1;
   active: boolean = true;
   title: string = "";
+  description: string = "";
   text: string = "";
   markdown: string = "";
   gallery: string = "";
@@ -15,6 +16,7 @@ export interface Card {
   map: boolean;
   imageUrl: string;
   title: string;
+  description: string;
   markdown: string;
   impressions: Impression[] | undefined;
   buttons: Button[] | undefined;

@@ -1,7 +1,7 @@
 <div *ngIf="content$ | async as content">
   <mat-nav-list class="bg-vert-clair">
     <div *ngFor="let item of content">
-      <a *ngIf="item.active" mat-list-item [routerLink]="['/schlosswochen', item.title]" class="text-terre-ombre-brule"> {{ item.title }} </a>
+      <a *ngIf="item.active" mat-list-item [routerLink]="['/schlosswochen', item.title]" class="text-terre-ombre-brule"> {{ item.description }} </a>
       <mat-divider *ngIf="item.active" class="border-terre-ombre-brule"></mat-divider>
     </div>
   </mat-nav-list>
