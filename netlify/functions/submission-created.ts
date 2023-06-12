@@ -3,12 +3,12 @@ import { Mailbody } from 'netlify/models/mailbody';
 import fetch from 'node-fetch';
 
 const handler: Handler = async function (event) {
-  if (event.body) {
+  //if (event.body) {
     return {
       statusCode: 400,
       body: JSON.stringify(event.body),
     };
-  }
+  //}
 
   const requestPayload: Mailbody = JSON.parse(event.body ?? '');
 
