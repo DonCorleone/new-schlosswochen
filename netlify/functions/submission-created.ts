@@ -22,7 +22,7 @@ const handler: Handler = async function (event) {
     method: 'POST',
     body: JSON.stringify({
       from: process.env['EMAIL_SENDER'],
-      to: requestPayload.email,
+      to: 'vitocorleone77+direct@gmail.com',
       subject: "Bestätigung Newsletter- Eintrag",
       parameters: {
         ...requestPayload.data
