@@ -3,10 +3,10 @@ import { Mailbody } from 'netlify/models/mailbody';
 import fetch from 'node-fetch';
 
 const handler: Handler = async function (event) {
-  if (event.body === null) {
+  if (event.body) {
     return {
       statusCode: 400,
-      body: JSON.stringify('Payload required'),
+      body: JSON.stringify(event.body),
     };
   }
 
@@ -22,7 +22,7 @@ const handler: Handler = async function (event) {
     method: 'POST',
     body: JSON.stringify({
       from: process.env['EMAIL_SENDER'],
-      to: 'vitocorleone77+direct@gmail.com',
+      to: requestPayload.email,
       subject: "Bestätigung Newsletter- Eintrag",
       parameters: {
         ...requestPayload.data
