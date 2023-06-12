@@ -1,4 +1,8 @@
 export interface Mailbody {
+    payload: Payload;
+}
+
+export interface Payload {
     number:               number;
     title:                string;
     email:                string;

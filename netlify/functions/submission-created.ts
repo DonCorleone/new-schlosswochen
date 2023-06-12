@@ -4,16 +4,15 @@ import fetch from 'node-fetch';
 
 const handler: Handler = async function (event) {
 
-  console.log(JSON.stringify(event));
-
   if (event.body === null) {
     return {
       statusCode: 400,
       body: JSON.stringify('Payload required'),
     };
   }
+  const requestPayload: Mailbody = JSON.parse(event.body);
 
-  const requestPayload: Mailbody = JSON.parse(event.body ?? '');
+  //const requestPayload: Mailbody = JSON.parse(event.body ?? '');
 
   //automatically generated snippet from the email preview
   //sends a request to an email handler for a subscribed email
@@ -25,10 +24,10 @@ const handler: Handler = async function (event) {
     method: 'POST',
     body: JSON.stringify({
       from: process.env['EMAIL_SENDER'],
-      to: requestPayload.email,
+      to: requestPayload.payload?.email,
       subject: "Bestätigung Newsletter- Eintrag",
       parameters: {
-        ...requestPayload.data
+        ...requestPayload.payload
       },
     }),
   });
