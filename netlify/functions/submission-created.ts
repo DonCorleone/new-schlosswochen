@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 
 const handler: Handler = async function (event) {
 
-  console.log(JSON.stringify(event.body));
+  console.log(JSON.stringify(event));
 
   if (event.body === null) {
     return {
