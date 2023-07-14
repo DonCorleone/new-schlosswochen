@@ -12,10 +12,6 @@ const handler: Handler = async function (event) {
   }
   const requestPayload: Mailbody = JSON.parse(event.body);
 
-  //const requestPayload: Mailbody = JSON.parse(event.body ?? '');
-
-  //automatically generated snippet from the email preview
-  //sends a request to an email handler for a subscribed email
   await fetch(`${process.env['URL']}/.netlify/functions/emails/subscribed`, {
 
     headers: {
