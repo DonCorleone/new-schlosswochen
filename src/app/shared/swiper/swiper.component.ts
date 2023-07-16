@@ -8,7 +8,7 @@ import { AutoplayOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-swiper',
-  templateUrl: './swiper.component.html'
+  templateUrl: './swiper.component.html',
 })
 export class SwiperComponent implements OnInit, OnDestroy {
   @Input() week: number = -1;
@@ -29,16 +29,19 @@ export class SwiperComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.config = {
       autoplay: this.autoplay ?? false,
-      pagination: this.autoplay ? false : {
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
+      pagination: this.autoplay
+        ? false
+        : {
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       spaceBetween: 30,
       lazy: true,
+      zoom: true,
     };
     this.breakpointObserver
       .observe([
