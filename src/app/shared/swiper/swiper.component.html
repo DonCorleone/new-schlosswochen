@@ -1,7 +1,7 @@
 <swiper *ngIf="files$ | async as files" [config]="config">
   <div class="swiper-wrapper">
     <ng-container *ngFor="let file of files">
-      <div class="swiper-slide static">
+      <div class="swiper-slide">
         <div class="swiper-zoom-container">
           <!--button
             mat-mini-fab
