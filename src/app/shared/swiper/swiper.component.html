@@ -14,7 +14,7 @@
         <button
         mat-mini-fab
         color="primary"
-        class="absolute right-1 md:right-9 top-1 md:top-3"
+        class="absolute right-1 md:right-9 top-1 md:top-3 bg-rouge-rubia/75 text-vert-clair border border-vert-clair"
         (click)="letsgo(file.path)"
       >
         <mat-icon>download</mat-icon>
@@ -23,8 +23,8 @@
     </ng-container>
   </div>
   <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination bg-rouge-rubia/75 pt-1"></div>
   <!-- Add Arrows -->
-  <div [ngClass]="autoplay ? '' : 'swiper-button-next'" class=""></div>
-  <div [ngClass]="autoplay ? '' : 'swiper-button-prev'" class=""></div>
+  <div [ngClass]="autoplay ? '' : 'swiper-button-next'" class="text-vert-clair bg-rouge-rubia/75"></div>
+  <div [ngClass]="autoplay ? '' : 'swiper-button-prev'" class="text-vert-clair bg-rouge-rubia/75"></div>
 </swiper>

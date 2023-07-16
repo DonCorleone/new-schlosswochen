@@ -34,3 +34,8 @@ mat-ink-bar {
   background-color: #943a4d !important;
   height: 4px !important;
 }
+.swiper-pagination-bullet{
+  background-color: #abc17a;
+  width: 15px;
+  height: 15px;
+}
