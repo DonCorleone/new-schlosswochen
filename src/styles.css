@@ -30,6 +30,10 @@ markdown > p > img {
   justify-content: space-between;
 }
 
+.mat-tab-body-content {
+  overflow: unset !important;
+}
+
 mat-ink-bar {
   background-color: #943a4d !important;
   height: 4px !important;
