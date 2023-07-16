@@ -36,6 +36,10 @@ mat-ink-bar {
 }
 .swiper-pagination-bullet{
   background-color: #abc17a;
-  width: 15px;
-  height: 15px;
+}
+@media (min-width: 768px) {
+  .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+  }
 }
