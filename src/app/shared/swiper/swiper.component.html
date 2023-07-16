@@ -1,8 +1,23 @@
-<swiper *ngIf="(files$ | async) as files" [config]="config">
+<swiper *ngIf="files$ | async as files" [config]="config">
   <div class="swiper-wrapper">
     <ng-container *ngFor="let file of files">
-      <div class="swiper-slide ">
-        <img [src]="file.path" width="100%" [alt]="file.id" class="swiper-lazy">
+      <div class="swiper-slide static">
+        <div class="swiper-zoom-container">
+          <!--button
+            mat-mini-fab
+            color="primary"
+            class="absolute right-1 top-1"
+            (click)="letsgo($event)"
+          >
+            <mat-icon>download</mat-icon>
+          </button-->
+          <img
+            [src]="file.path"
+            width="100%"
+            [alt]="file.id"
+            class="swiper-lazy"
+          />
+        </div>
       </div>
     </ng-container>
   </div>
