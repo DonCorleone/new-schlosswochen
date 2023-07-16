@@ -3,21 +3,22 @@
     <ng-container *ngFor="let file of files">
       <div class="swiper-slide">
         <div class="swiper-zoom-container">
-          <!--button
-            mat-mini-fab
-            color="primary"
-            class="absolute right-1 top-1"
-            (click)="letsgo($event)"
-          >
-            <mat-icon>download</mat-icon>
-          </button-->
           <img
             [src]="file.path"
             width="100%"
             [alt]="file.id"
             class="swiper-lazy swiper-zoom-target"
           />
+
         </div>
+        <button
+        mat-mini-fab
+        color="primary"
+        class="absolute right-1 md:right-9 top-1 md:top-3"
+        (click)="letsgo(file.path)"
+      >
+        <mat-icon>download</mat-icon>
+      </button>
       </div>
     </ng-container>
   </div>

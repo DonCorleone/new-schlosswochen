@@ -5,12 +5,19 @@ import { ImagesService, Netlifile } from '../../services/images.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { environment } from '../../../environments/environment';
 import { AutoplayOptions } from 'swiper/types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-swiper',
   templateUrl: './swiper.component.html',
 })
 export class SwiperComponent implements OnInit, OnDestroy {
+  letsgo(filePath: string) {
+    // remove the trailing ?nf_resize=fit&w=* from the path
+    filePath = filePath.replace(/\?nf_resize=fit&w=\d+$/, '');
+    // open a new tab with the image
+    window.open(filePath, '_blank');
+  }
   @Input() week: number = -1;
   @Input() year: number = -1;
   @Input() autoplay: AutoplayOptions | undefined;
@@ -23,7 +30,8 @@ export class SwiperComponent implements OnInit, OnDestroy {
 
   constructor(
     private imageService: ImagesService,
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
