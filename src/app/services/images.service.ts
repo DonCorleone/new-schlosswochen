@@ -25,7 +25,7 @@ export class ImagesService {
       )
       .pipe(
         map((p) => p.filter((f) => f.path.startsWith(path))),
-        map((x) => this.shuffle(x))
+        // map((x) => this.shuffle(x))
       );
   }
 

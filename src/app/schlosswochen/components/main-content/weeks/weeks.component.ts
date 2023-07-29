@@ -3,8 +3,7 @@ import {Week} from "../../../../models/content";
 
 @Component({
   selector: 'app-weeks',
-  templateUrl: './weeks.component.html',
-  styleUrls: ['./weeks.component.css']
+  templateUrl: './weeks.component.html'
 })
 export class WeeksComponent {
   @Input() weeks: Week[] | undefined;
