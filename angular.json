@@ -92,13 +92,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "schlosswochen-ch:build:production"
+              "buildTarget": "schlosswochen-ch:build:production"
             },
             "custom": {
-              "browserTarget": "schlosswochen-ch:build:custom"
+              "buildTarget": "schlosswochen-ch:build:custom"
             },
             "development": {
-              "browserTarget": "schlosswochen-ch:build:development"
+              "buildTarget": "schlosswochen-ch:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,7 +106,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "schlosswochen-ch:build"
+            "buildTarget": "schlosswochen-ch:build"
           }
         },
         "test": {
