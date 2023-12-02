@@ -10,11 +10,11 @@ import { SeoService } from '../../../services/seo.service';
   templateUrl: './main-content.component.html',
   styles: [
     `
-                              markdown > p {
-                                display: flex;
-                                flex-direction: column;
-                              }
-                            `,
+                                          markdown > p {
+                                            display: flex;
+                                            flex-direction: column;
+                                          }
+                                        `,
   ],
 })
 export class MainContentComponent implements OnInit, OnDestroy {

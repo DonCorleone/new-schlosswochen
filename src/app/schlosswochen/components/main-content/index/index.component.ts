@@ -8,10 +8,10 @@ import { ContentService } from '../../../../services/content.service';
   templateUrl: './index.component.html',
   styles: [
     `
-                              div div:last-child mat-divider {
-                                display: none;
-                              }
-                            `,
+                                          div div:last-child mat-divider {
+                                            display: none;
+                                          }
+                                        `,
   ],
 })
 export class IndexComponent {
