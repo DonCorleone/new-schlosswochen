@@ -1,4 +1,8 @@
-import { NgModule, SecurityContext } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  SecurityContext,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -15,8 +19,9 @@ import {
 import { SwiperModule } from './shared/swiper/swiper.module';
 import { DateAdapter } from '@angular/material/core';
 import { CustomDateAdapter } from './schlosswochen/components/main-content/readonly-datepicker/custom-date-adapter';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 import { GoogleMapsModule } from '@angular/google-maps';
+
+import { register } from 'swiper/element/bundle';
 
 const routes: Routes = [
   {
@@ -61,7 +66,6 @@ export function markedOptionsFactory(): MarkedOptions {
         useFactory: markedOptionsFactory,
       },
     }),
-    ScullyLibModule,
     HttpClientJsonpModule,
   ],
   providers: [],
