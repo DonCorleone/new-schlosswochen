@@ -7,10 +7,10 @@ import {C} from "@angular/cdk/keycodes";
   templateUrl: './card.component.html',
   styles: [
     `
-      img[mat-card-image] {
-        max-width: unset;
-      }
-    `,
+                              img[mat-card-image] {
+                                max-width: unset;
+                              }
+                            `,
   ],
 })
 export class CardComponent {
