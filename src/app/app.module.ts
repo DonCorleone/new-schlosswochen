@@ -8,9 +8,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
-//import { MarkdownModule } from 'ngx-markdown';
+import { MarkdownModule } from 'ngx-markdown';
+import { MARKED_OPTIONS, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 
-//import { MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 import {
   HttpClient,
   HttpClientJsonpModule,
@@ -35,7 +35,7 @@ const routes: Routes = [
 ];
 
 // function that returns `MarkedOptions` with renderer override ..
-/*export function markedOptionsFactory(): MarkedOptions {
+export function markedOptionsFactory(): MarkedOptions {
   const renderer = new MarkedRenderer();
 
   renderer.paragraph = (text: string) => {
@@ -47,10 +47,8 @@ const routes: Routes = [
     gfm: true,
     breaks: false,
     pedantic: false,
-    smartLists: true,
-    smartypants: false,
   };
-}*/
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -59,13 +57,13 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-/*    MarkdownModule.forRoot({
+    MarkdownModule.forRoot({
       loader: HttpClient,
       markedOptions: {
-        provide: MarkedOptions,
+        provide: MARKED_OPTIONS,
         useFactory: markedOptionsFactory,
       },
-    }),*/
+    }),
     HttpClientJsonpModule,
   ],
   providers: [],
