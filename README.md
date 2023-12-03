@@ -7,3 +7,11 @@ https://www.npmjs.com/package/ngx-markdown
 https://github.com/angular/components/blob/main/src/google-maps/README.md
 
 https://timdeschryver.dev/blog/google-maps-as-an-angular-component#mapmarker
+
+Angular 17+
+
+Tailwind css
+
+Angular Material
+
+Netlify Functions

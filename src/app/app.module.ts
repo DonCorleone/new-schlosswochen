@@ -1,12 +1,16 @@
-import { NgModule, SecurityContext } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  SecurityContext,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
+import { MARKED_OPTIONS, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 
-import { MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 import {
   HttpClient,
   HttpClientJsonpModule,
@@ -15,8 +19,9 @@ import {
 import { SwiperModule } from './shared/swiper/swiper.module';
 import { DateAdapter } from '@angular/material/core';
 import { CustomDateAdapter } from './schlosswochen/components/main-content/readonly-datepicker/custom-date-adapter';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 import { GoogleMapsModule } from '@angular/google-maps';
+
+import { register } from 'swiper/element/bundle';
 
 const routes: Routes = [
   {
@@ -42,8 +47,6 @@ export function markedOptionsFactory(): MarkedOptions {
     gfm: true,
     breaks: false,
     pedantic: false,
-    smartLists: true,
-    smartypants: false,
   };
 }
 
@@ -57,11 +60,10 @@ export function markedOptionsFactory(): MarkedOptions {
     MarkdownModule.forRoot({
       loader: HttpClient,
       markedOptions: {
-        provide: MarkedOptions,
+        provide: MARKED_OPTIONS,
         useFactory: markedOptionsFactory,
       },
     }),
-    ScullyLibModule,
     HttpClientJsonpModule,
   ],
   providers: [],

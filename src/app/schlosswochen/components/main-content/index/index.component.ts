@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { Content } from '../../../../models/content';
-import { Observable } from 'rxjs';
-import { ContentService } from '../../../../services/content.service';
+import {Component} from '@angular/core';
+import {Content} from '../../../../models/content';
+import {map, Observable} from 'rxjs';
+import {ContentService} from '../../../../services/content.service';
 
 @Component({
   selector: 'app-index',
@@ -11,11 +11,20 @@ import { ContentService } from '../../../../services/content.service';
       div div:last-child mat-divider {
         display: none;
       }
+      .mat-list-item.active {
+        background-color: red;
+      }
     `,
   ],
 })
 export class IndexComponent {
-  content$: Observable<Content[]> = this.contentService.content;
+  content$: Observable<Content[]> = this.contentService.content.pipe(
+    map(x => x.filter(p => p.active))
+  );
 
-  constructor(private contentService: ContentService) {}
+  constructor(private contentService: ContentService) {
+  }
+  identify(index: number, item: Content){
+    return item._id;
+  }
 }
