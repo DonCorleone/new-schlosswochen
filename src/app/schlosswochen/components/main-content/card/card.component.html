@@ -13,15 +13,14 @@
         alt="Image"
         class="grayscale"
       />
-      <!--img src="../../../../../assets/svg/logo.svg"-->
       <mat-card-content
         class="bg-vert-59 text-terre-ombre-brule -ml-4 -mr-4 -mb-4 p-4"
       >
         <p *ngIf="card.markdown">
-          <markdown
+          <!--markdown
             class="prose dark:prose-invert"
             [src]="'/assets/markdown/' + card.markdown + '.md'"
-          ></markdown>
+          ></markdown-->
         </p>
         <app-maps *ngIf="card.map"></app-maps>
         <app-index *ngIf="card.index"></app-index>

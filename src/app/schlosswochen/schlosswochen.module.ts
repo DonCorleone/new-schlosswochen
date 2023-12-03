@@ -5,7 +5,7 @@ import { SchlosswochenAppComponent } from './schlosswochen-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { MarkdownModule } from 'ngx-markdown';
+// import { MarkdownModule } from 'ngx-markdown';
 import { ContentService } from '../services/content.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { ImpressionsComponent } from './components/main-content/impressions/impressions.component';
@@ -57,14 +57,14 @@ const routes: Routes = [
     ButtonsComponent,
     SubscribeComponent,
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule.forChild(routes),
-    MarkdownModule.forChild(),
-    SwiperModule,
-    GoogleMapsModule,
-  ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        RouterModule.forChild(routes),
+        //MarkdownModule.forChild(),
+        SwiperModule,
+        GoogleMapsModule,
+    ],
   providers: [
     ContentService,
     MatIconRegistry,
