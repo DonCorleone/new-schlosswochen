@@ -1,8 +1,10 @@
 <div *ngIf="content$ | async as content">
-  <mat-nav-list class="bg-vert-clair">
-    <div *ngFor="let item of content">
-      <a *ngIf="item.active" mat-list-item [routerLink]="['/schlosswochen', item.title]" class="text-terre-ombre-brule"> {{ item.description }} </a>
-      <mat-divider *ngIf="item.active" class="border-terre-ombre-brule"></mat-divider>
-    </div>
+  <mat-nav-list class="bg-vert-clair pt-0">
+    <mat-list-item *ngFor="let item of content; trackBy:identify"
+                   [routerLinkActive]="['active']"
+                   [routerLink]="['/schlosswochen', item.title]"
+                    class="active:bg-rouge-rubia divide-bleu-ceruleen-pale divide-y divide-solid">
+      <a matListItemTitle class="text-terre-ombre-brule">{{ item.description }}</a>
+    </mat-list-item>
   </mat-nav-list>
 </div>
