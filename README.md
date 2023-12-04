@@ -15,3 +15,5 @@ Tailwind css
 Angular Material
 
 Netlify Functions
+
+Angular prerender
