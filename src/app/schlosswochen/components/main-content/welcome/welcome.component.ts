@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import {Card, Content, Week} from '../../../../models/content';
 import { ContentService } from '../../../../services/content.service';
-import { EMPTY, map, Observable, Subject, takeUntil } from 'rxjs';
+import { EMPTY, map, Observable, of, Subject, takeUntil } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { environment } from '../../../../../environments/environment';
 
@@ -17,8 +17,8 @@ export class WelcomeComponent implements OnInit, OnDestroy {
     private breakpointObserver: BreakpointObserver
   ) {}
   private _ngDestroy$ = new Subject<void>();
-  weeks: Week[] = [];
-  year= 0;
+  weeks$: Observable<Week[]> = EMPTY;
+  year$: Observable<number | undefined> = EMPTY;
 
   ngOnInit(): void {
 
@@ -34,8 +34,8 @@ export class WelcomeComponent implements OnInit, OnDestroy {
         })[0];
 
         if (currentImpression) {
-          this.year = currentImpression.year;
-          this.weeks = currentImpression.weeks;
+          this.year$ = of(currentImpression.year);
+          this.weeks$ = of(currentImpression.weeks);
         }
       }
     });

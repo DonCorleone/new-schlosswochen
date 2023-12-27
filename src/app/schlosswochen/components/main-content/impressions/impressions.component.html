@@ -1,6 +1,6 @@
-<mat-tab-group *ngIf="card && card.impressions" mat-align-tabs="start">
+<mat-tab-group *ngIf="impressions" mat-align-tabs="start">
   <mat-tab
-    *ngFor="let impression of card.impressions"
+    *ngFor="let impression of impressions"
     [label]="impression.year.toString()"
   >
     <ng-template matTabContent>
