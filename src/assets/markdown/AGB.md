@@ -1,1 +1,1 @@
-Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [PDF](/assets/pdf/agb_schlosswochen.pdf)
+Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [PDF](/assets/files/agb_schlosswochen.pdf)
