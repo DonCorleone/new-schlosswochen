@@ -1,1 +1,1 @@
-Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [www.kinderkultur.ch](/assets/pdf/agb_schlosswochen_2023.pdf)
+Die Allgemeinen Geschäftsbedingungen können [hier](/assets/pdf/agb_schlosswochen.pdf) heruntergeladen werden: [PDF](/assets/pdf/agb_schlosswochen.pdf)
