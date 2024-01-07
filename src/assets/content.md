@@ -26,7 +26,7 @@ Fr. 270.- für eine Schlosswoche inkl. Werkmaterial & Mittagessen pro Kind Gesch
 
 ## AGB
 
-Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [www.kinderkultur.ch](/assets/files/agb_schlosswochen.pdf)
+Die Allgemeinen Geschäftsbedingungen können hier heruntergeladen werden: [www.kinderkultur.ch](/assets/pdf/agb_schlosswochen.pdf)
 
 ## Ort
 
