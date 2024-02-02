@@ -5,6 +5,7 @@ export class Content {
   title: string = "";
   description: string = "";
   text: string = "";
+  description: string = "";
   markdown: string = "";
   gallery: string = "";
   cards: Card[] | undefined;
@@ -18,6 +19,7 @@ export interface Card {
   title: string;
   description: string;
   markdown: string;
+  description: string;
   impressions: Impression[] | undefined;
   buttons: Button[] | undefined;
   subscribe?: boolean;
