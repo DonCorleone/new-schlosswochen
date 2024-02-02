@@ -1,9 +1,9 @@
 <ng-container *ngIf="card">
   <div class="mat-typography">
     <mat-card *ngIf="card" class="bg-vert-clair">
-      <mat-card-header *ngIf="card.title">
+      <mat-card-header *ngIf="card.description">
         <mat-card-title>
-          <h1 class="text-terre-ombre-brule">{{ card.title }}</h1>
+          <h1 class="text-terre-ombre-brule">{{ card.description }}</h1>
         </mat-card-title>
       </mat-card-header>
       <img

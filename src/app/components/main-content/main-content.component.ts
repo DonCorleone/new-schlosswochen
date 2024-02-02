@@ -42,6 +42,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
             active: true,
             gallery: '',
             markdown: '',
+            description:'',
             cards: undefined,
           };
           return;

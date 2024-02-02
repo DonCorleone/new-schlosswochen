@@ -4,6 +4,7 @@ export class Content {
   active: boolean = true;
   title: string = "";
   text: string = "";
+  description: string = "";
   markdown: string = "";
   gallery: string = "";
   cards: Card[] | undefined;
@@ -14,6 +15,7 @@ export interface Card {
   imageUrl: string;
   title: string;
   markdown: string;
+  description: string;
   impressions: Impression[] | undefined;
 }
 export interface Week {
