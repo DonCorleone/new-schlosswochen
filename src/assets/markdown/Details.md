@@ -4,11 +4,11 @@ Damit die Kinder einen optimalen Start in die Schlosswochen erleben, sind einige
 - Finken
 - Znüni
 
-- __Bei schönem Wetter:__ 
+- __Bei schönem Wetter:__
 - Sonnenhut
 - _Bitte reiben Sie Ihre Kinder zu Hause mit Sonnencreme ein_
 
-- __Bei schlechtem Wetter:__ 
+- __Bei schlechtem Wetter:__
 - Gummistiefel
 - Regenschutz
 
